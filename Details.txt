@@ -1,0 +1,120 @@
+0. module import hoisting behavior
+
+1. Node JS npm project, so we can install external packages
+    1. Create a project for the backend
+    2. npm install <package-name>
+
+1.1 Create file with name as the iso datetime & contents as the timestamp
+
+2. HTTP Server:
+
+    http --> protocol used to serve files or data via network
+
+    basic server creation using http create server
+
+    Disadvantages:
+      http: does not provide wide variety of function to support operations like,
+
+        1. body parsing
+        2. changing http methods
+        3. handling middlewares
+        4. proper routing logic is not possible
+
+      We need to manually handle it with a lots of codes
+
+2.1 POST-Man
+    Browser by default has some restrictions for doing REST API calls
+
+    Tool used to access different API Methods like below,
+      1. GET
+      2. POST
+      3. PUT
+      4. DELETE
+
+3. Express:
+    APIs using express -
+    why express external module:
+        basic server creation is possible in normal nodejs that involves lot of code with lots of built-in packages
+    
+        Express combines everything and puts together in simple terms
+          web framework http server applcation which lets us create APIs in fast and simple ways
+
+      /students - CRUD (GET, PUT, POST, DELETE)
+        store in local memory
+        GET - get all the students in the memory
+        POST - Create a new student in the memory
+        DELETE - Delete a student in the memory
+
+    Router:
+      express.Router(); // sample instance of the server
+
+4. CRUD Operations with APIs
+   CREATE, READ, UPDATE, DELETE
+
+5. URL Params:
+    Path Params: /:id
+
+        id or name is the path variable/param
+      request.params
+
+      param is *id*
+    
+    Query Params: comes after question mark
+      request.query
+      /todos?deleteId=100
+      param is *deleteId*
+
+6. Request is an object with pre-defined key<->value pairs & methods/functions
+
+    express request object is different or customized depending on the requirements
+    used to operate on top of the request in-coming
+
+    Eg: request.body gives the payload, 
+    
+    Below are created by expressjs,
+      req.params['<param-name>'] gives the path param. request.query will give the query param
+
+    reference: https://developer.mozilla.org/en-US/docs/Web/API/Request
+
+7. Resposne:
+    response is an object with pre-defined key<->value pairs & methods
+    used to operate on top of the response out-going
+
+    Express Created funcs,
+      res.send(); res.status(), res.json()
+
+8. Deploying a nodejs application using render.com
+      1. Publish codes to Github
+      2. Log in or Sign-Up with Github on render.com
+      3. New Web Service
+      4. Choose Repo & connect
+      5. Configure proper cmds
+          1. build cmd ---> npm install
+          2. Start Command ---> whatever the script that You want to run
+      6. Deploy ( Watch out for any errors in the deployment process)
+
+Tasks:
+
+  Day 33:
+
+    File System Task:
+      https://docs.google.com/document/d/1c_u6azHv7AQHse45GGcrCRe78liwv90S5aHwBR7tBP0/edit
+
+  Day 34: 
+
+    Nodejs hall booking api task using local memory variable as we did today,
+    https://docs.google.com/document/d/1rwPQ2LbHtMZajA_GIZfR-Ko2MFueoT82AmfHTK9V-hM/edit
+
+    Logic: keep the below variables in a single file and export them as data for api logic,
+    rooms = [], bookings = [], customers = []
+
+    Related Entities:
+      /rooms ( CRUD )
+      /bookings ( CRUD )
+      /customers ( CRUD )
+
+    Send the responses appropriately using if else blocks
+
+    How to relate the data together, try the entity relation, also use the array methods 
+
+
