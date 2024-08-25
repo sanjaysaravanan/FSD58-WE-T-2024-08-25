@@ -90,7 +90,7 @@
       4. Choose Repo & connect
       5. Configure proper cmds
           1. build cmd ---> npm install
-          2. Start Command ---> whatever the script that You want to run
+          2. Start Command ---> whatever the script that You want to run (node express-server.js)
       6. Deploy ( Watch out for any errors in the deployment process)
 
 Tasks:
